@@ -50,7 +50,7 @@ class Owner
   end
 
   def walk_dogs
-    @dog.each {|dog| dog.mood = "happy"}
+    @dog.collect {|dog| dog.mood = "happy"}
   end
 
   def feed_cats
