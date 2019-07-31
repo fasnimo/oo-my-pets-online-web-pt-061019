@@ -55,13 +55,7 @@ class Owner
   end
 
   def feed_cats
-    @pets.collect do |species, instances|
-      if species == :cat
-        instances.each do |cat|
-          cat.mood = "happy"
-        end
-      end
-    end
+    @cat.each {|cat| cat.mood = "happy"}
   end
 
   def sell_pets
