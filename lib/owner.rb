@@ -3,16 +3,17 @@ class Owner
   attr_reader :name, :species
   @@all = []
 
-  def initialize(name)
+  def initialize(species)
     #can not change owners name
-    @name = name
+    # @name = name
+    @species = species
     @@all << self
     @pets = {:dogs => [], :cats => []}
   end
 
-  def species
-    @species = "human"
-  end
+  # def species
+  #   @species = "human"
+  # end
 
   def say_species
     #can say it's  species
