@@ -7,7 +7,7 @@ class Owner
     #can not change owners name
     @name = name
     @@all << self
-    @pets = {:dogs => [], :cats => []}
+    @pets = {:dog => [], :cat => []}
   end
 
   def species
