@@ -7,7 +7,6 @@ class Owner
     #can not change owners name
     @name = name
     @@all << self
-    @pets = {:dog => [], :cat => []}
   end
 
   def species
@@ -59,11 +58,12 @@ class Owner
   end
 
   def sell_pets
-    @pets.collect do |species, instances|
-     instances.each do |pet|
-       pet.mood = "nervous"
-     end
-     instances.clear
+    pets = @dogs+@cats
+   pets.each do |pet|
+     pet.mood = "nervous"
+     pet.owner = nil
    end
-  end
+   @dogs = []
+   @cats = []
+ end
 end
