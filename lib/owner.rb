@@ -55,16 +55,21 @@ class Owner
   def feed_cats
     @cat.each {|cat| cat.mood = "happy"}
   end
+  self.cats.each {|kitty| kitty.mood = "nervous"}
+    self.dogs.each {|dog| dog.mood = "nervous"}
+    self.cats.each {|kitty| kitty.owner = nil}
+    self.dogs.each {|dog| dog.owner = nil}
 
-  def sell_pets
-    pets = @dogs+@cats
-   pets.each do |pet|
-     pet.mood = "nervous"
-     pet.owner = nil
-   end
-   @dogs = []
-   @cats = []
- end
+  end
+ #  def sell_pets
+ #    pets = @dogs+@cats
+ #   pets.each do |pet|
+ #     pet.mood = "nervous"
+ #     pet.owner = nil
+ #   end
+ #   @dogs = []
+ #   @cats = []
+ # end
 
  def list_pets
    "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
