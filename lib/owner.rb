@@ -6,7 +6,7 @@ class Owner
   def initialize(species)
     #can not change owners name
     # @name = name
-    @species = species
+    @species = human
     @@all << self
     @pets = {:dogs => [], :cats => []}
   end
