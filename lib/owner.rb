@@ -5,9 +5,10 @@ class Owner
 
   def initialize(name)
     #can not change owners name
+    
+    @name = name
     @cats = []
     @dogs = []
-    @name = name
     @@all << self
   end
 
