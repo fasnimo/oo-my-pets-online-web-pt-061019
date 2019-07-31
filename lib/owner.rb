@@ -62,17 +62,8 @@ class Owner
     self.dogs.each {|bark| bark.owner = nil}
 
   end
- #  def sell_pets
- #    pets = @dogs+@cats
- #   pets.each do |pet|
- #     pet.mood = "nervous"
- #     pet.owner = nil
- #   end
- #   @dogs = []
- #   @cats = []
- # end
 
- def list_pets
+  def list_pets
    "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
- end
+  end
 end
