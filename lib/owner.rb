@@ -5,15 +5,14 @@ class Owner
 
   def initialize(species)
     #can not change owners name
-    # @name = name
-    @species = "human"
+    @name = name
     @@all << self
     @pets = {:dogs => [], :cats => []}
   end
 
-  # def species
-  #   @species = "human"
-  # end
+  def species
+    @species = "human"
+  end
 
   def say_species
     #can say it's  species
